@@ -80,20 +80,6 @@ The display shows a long, narrow tube of alternating boron and nitrogen atoms wi
 
 ---
 
-## Visualization 4 — Machine learning plot
-
-The fourth cell attempts to download properties of CuO and BN from the Materials Project database, train a model to predict energy, and plot predicted values against actual values. A good model would produce points falling near a diagonal line.
-
-This cell does not run, and it would not be informative if it did. Three reasons:
-
-- **The database does not contain nanotubes.** The Materials Project stores bulk crystals. There is no entry for BNNT, and hBN is stored under the formula BN.
-- **The model is asked to predict something it is already given.** Energy appears both as an input and as the answer. This forces an apparently perfect result that reflects nothing about the model's ability.
-- **The properties chosen are not related to catalysis.** Band gap, density and formation energy of a bulk crystal do not predict how well a supported catalyst oxidizes CO. The relevant quantities are how strongly CO binds to the copper oxide and how easily the oxide gives up an oxygen atom.
-
-This cell should either be rebuilt around catalysis-relevant properties or removed.
-
----
-
 ## How the visualizations connect to the experimental results
 
 **They give a reference point for reading the TEM images.** The abstract reports that CoOx/hBN showed the least agglomeration and the best dispersion at the edges of hBN wafers. Agglomeration means the oxide has clumped into larger particles; dispersion means it has stayed spread out. The models represent the ideal limit of perfect dispersion, since six separate molecules are placed and nothing allows them to merge.
@@ -107,12 +93,6 @@ That limit converts into a useful comparison for the TEM:
 The entire 1 wt% copper content of the 100 nm² modeled sheet is 6 units — less than a quarter of a single 1 nm particle. Any visible particle in a TEM image therefore draws copper from a support area far larger than the simulation box. This provides a way to translate an observed particle size into an estimate of how much of the copper has agglomerated.
 
 **They do not yet represent the edges, which is where the key TEM observation lies.** The modeled sheet is treated as repeating infinitely in both flat directions, which means it has no boundary at all. Since the abstract identifies edges as the site of greatest dispersion, a follow-up model would need a finite flake or a strip with defined edges to study that effect.
-
-**They cannot yet explain the catalytic result.** The abstract reports a large difference between the cobalt and copper systems: CoOx/BNNT reached 90% conversion at 205 °C, while both copper samples stayed below 20% conversion even at 450 °C. Explaining that gap requires calculated energies, and this notebook calculates none. It produces structure files only.
-
-The structure files are the input to that next calculation. The most informative quantity would be the **oxygen vacancy formation energy**, which measures how easily the oxide releases one of its own oxygen atoms. In many CO oxidation reactions on metal oxides, CO takes an oxygen atom directly from the oxide, and the resulting gap is refilled from the oxygen gas flowing over the catalyst. If that oxygen is held too tightly, the reaction is slow. This is a testable explanation for why copper underperformed cobalt.
-
-Calculating it would require one change to the models: a single CuO molecule has only one oxygen atom and no surrounding oxide structure, so it cannot represent this process. Small clusters of several copper and oxygen atoms would be needed instead.
 
 ---
 
