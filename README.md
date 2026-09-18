@@ -90,9 +90,7 @@ That limit converts into a useful comparison for the TEM:
 - A **2 nm** particle contains about **200**.
 - A **5 nm** particle contains about **3,100**.
 
-The entire 1 wt% copper content of the 100 nm² modeled sheet is 6 units — less than a quarter of a single 1 nm particle. Any visible particle in a TEM image therefore draws copper from a support area far larger than the simulation box. This provides a way to translate an observed particle size into an estimate of how much of the copper has agglomerated.
-
-**They do not yet represent the edges, which is where the key TEM observation lies.** The modeled sheet is treated as repeating infinitely in both flat directions, which means it has no boundary at all. Since the abstract identifies edges as the site of greatest dispersion, a follow-up model would need a finite flake or a strip with defined edges to study that effect.
+The entire 1 wt% copper content of the 100 nm² modeled sheet is 6 units, less than a quarter of a single 1 nm particle. Any visible particle in a TEM image therefore draws copper from a support area far larger than the simulation box. This provides a way to translate an observed particle size into an estimate of how much of the copper has agglomerated.
 
 ---
 
