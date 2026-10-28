@@ -55,8 +55,6 @@ The display shows a large honeycomb sheet with six isolated copper oxide molecul
 
 **That emptiness is the scientific point.** It shows directly what 1 wt% means: the copper is a trace addition, and if it is well dispersed, individual copper oxide units sit far apart from one another with large stretches of bare support between them.
 
-**One correction is needed.** The code intends to place the copper 3 Å above the sheet, but the number `3.0` is measured from the bottom of the simulation box rather than from the sheet itself. Because the sheet was moved to a height of 15 Å, the copper ends up 12 Å **below** it, floating in empty space with no contact with the support. The first cell handles this correctly, so the intent is clear elsewhere in the notebook. The structure should be regenerated before it is used for anything further.
-
 ---
 
 ## Visualization 3 — Copper oxide inside a boron nitride nanotube
